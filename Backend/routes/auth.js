@@ -12,7 +12,7 @@ router.post(
     body('username').notEmpty().withMessage('Le nom d\'utilisateur est obligatoire.'),
     body('email').isEmail().withMessage('Email invalide.'),
     body('password').isLength({ min: 6 }).withMessage('Le mot de passe doit contenir au moins 6 caractères.'),
-    body('numero_telephone').isMobilePhone().withMessage('Numéro de téléphone invalide.'),
+   // body('numero_telephone').isMobilePhone().withMessage('Numéro de téléphone invalide.'),
     body('date_naissance').isDate().withMessage('Date de naissance invalide.'),
   ],
   async (req, res) => {
